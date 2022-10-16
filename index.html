@@ -15,6 +15,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
+    <!-- <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/> -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
@@ -521,6 +526,22 @@
             </li>
           </ul>
         </div>
+        <div class="form-container">
+          <h2 class="social-title">Підпишіться на розсилку</h2>
+          <div class="form-send">
+            <form name="signup-form" autocomplete="on" novalidate>
+              <label for="email" class="visually-hidden"> E-mail </label>
+              <input type="email" name="email" placeholder="E-mail" class="email-input" />
+
+              <button type="submit" class="submit-btn">
+                Підписатися
+                <svg class="icon-send">
+                  <use href="./images/icon.svg#icon-send"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -530,8 +551,68 @@
             <use href="./images/icon.svg#icon-close"></use>
           </svg>
         </button>
+        <form class="form">
+          <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
+
+          <label for="name" class="form-label"
+            >Ім'я
+            <div class="form-field">
+              <input type="text" name="name" id="name" class="form-input" />
+              <svg class="icon-modal">
+                <use href="./images/icon.svg#icon-modal-person"></use>
+              </svg>
+            </div>
+          </label>
+          <label class="form-label"
+            >Телефон
+            <div class="form-field">
+              <input type="tel" name="tel" id="tel" class="form-input" />
+              <svg class="icon-modal">
+                <use href="./images/icon.svg#icon-modal-phone"></use>
+              </svg>
+            </div>
+          </label>
+
+          <label for="email" class="form-label"
+            >Пошта
+            <div class="form-field">
+              <input type="email" name="email" id="email" class="form-input" />
+              <svg class="icon-modal">
+                <use href="./images/icon.svg#icon-modal-email"></use>
+              </svg>
+            </div>
+          </label>
+
+          <label for="comment" class="form-label"
+            >Коментар
+            <div class="form-field">
+              <textarea
+                name="comment"
+                rows="5"
+                id="comment"
+                placeholder="Введіть текст"
+                class="form-input"
+              ></textarea>
+            </div>
+          </label>
+
+          <div class="checkbox-container">
+            <label for="agrement" class="agrement"
+              >Погоджуюся з розсилкою та приймаю
+              <a href="index.html" class="contract">Умови договору</a>
+              <input type="checkbox" name="agrement" id="agrement" class="checkbox" />
+              <span class="new-checkbox"> </span>
+            </label>
+          </div>
+
+          <button type="submit" class="modal-sub">Відправити</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
